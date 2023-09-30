@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const apiRoutes = require('./routes/apiRoutes');
+const routes = require('./routes');
 const db = require('./config/connection');
 
 
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 
 // Use the API routes
-app.use(apiRoutes);
+app.use(routes);
 
 db.once('open', () => {
     app.listen(PORT, () => {
