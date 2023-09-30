@@ -7,14 +7,6 @@ const db = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Connect to MongoDB
-// mongoose.connect('mongodb://localhost/social-network', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useCreateIndex: true,
-//   useFindAndModify: false
-// });
-
 // Middleware for handling JSON data
 app.use(express.json());
 
